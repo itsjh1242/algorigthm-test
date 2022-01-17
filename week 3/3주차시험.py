@@ -1,5 +1,6 @@
 # Last Edit
 # 2022.01.17 _ 16:47
+# 2022.01.17 _ 17:20
 
 def task_1():
     N = int(input('N을 입력하세요 : '))
@@ -24,7 +25,7 @@ def task_3():
         # Invalid
         def Invalid_(arr):
             arr.sort()
-            if arr[2] >= arr[0] + arr[1]:
+            if arr[2] >= sum(arr[0:2]):
                 return True
         # Equilateral
         def Equilateral_(arr):
@@ -32,9 +33,11 @@ def task_3():
         # Scalene
         def Scalene_(arr):
             if arr[0] != arr[1] != arr[2]: return True
+        # Isosceles
         def Isosceles_(arr):
             arr.sort()
-            if (arr[1] + arr[2]) // 2 == arr[1]: return True
+            if (arr[1] + arr[2]) / 2 == arr[1]: return True
+        
         if Invalid_(N): print('Invalid')
         elif Equilateral_(N): print('Equilateral')
         elif Isosceles_(N): print('Isosceles')
