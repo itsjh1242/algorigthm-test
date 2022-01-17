@@ -1,3 +1,6 @@
+# Last Edit
+# 2022.01.17 _ 16:47
+
 def task_1():
     N = int(input('N을 입력하세요 : '))
     num = sum(list(map(int,input('숫자 {}개를 입력하세요 : '.format(N)))))
