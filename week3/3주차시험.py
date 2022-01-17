@@ -16,32 +16,31 @@ def task_2():
 
 def task_3():
     while True:
-        N = list(map(int, input().split()))
+        N = list(map(int, input('세 변의 길이를 입력하세요 : ').split()))
         if sum(N) == 0: break
         # Invalid
         def Invalid_(arr):
-            arr.sort(reverse = True)
-            if arr[2] <= arr[0] + arr[1]:
+            arr.sort()
+            if arr[2] >= arr[0] + arr[1]:
                 return True
         # Equilateral
         def Equilateral_(arr):
             if arr[0] == arr[1] == arr[2]: return True
         # Scalene
         def Scalene_(arr):
-            if arr[0] != arr[1] == arr[2]: return True
+            if arr[0] != arr[1] != arr[2]: return True
         def Isosceles_(arr):
-            arr.sort(reverse = True)
-            if arr[0] == arr[1] and arr[0] != arr[2] and arr[1] != arr[2]: return True
-        if Equilateral_(N): return(print('Equilateral'))
-        if Invalid_(N): return(print('Invalid'))
-        if Isosceles_(N): return(print('Isosceles'))
-        if Scalene_(N): return(print('Scalene'))
+            arr.sort()
+            if (arr[1] + arr[2]) // 2 == arr[1]: return True
+        if Invalid_(N): print('Invalid')
+        elif Equilateral_(N): print('Equilateral')
+        elif Isosceles_(N): print('Isosceles')
+        elif Scalene_(N): print('Scalene')
+        
+    print('*' * 10 + '\n0 0 0을 입력해서 프로그램이 종료 되었습니다.\n' + '*' * 10)
 
 
             
-
-
-
 
 # task_1()
 # task_2()
