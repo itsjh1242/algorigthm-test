@@ -1,6 +1,7 @@
 # Last Edit
 # 2022.01.17 _ 16:47
 # 2022.01.17 _ 17:20
+# 2022.01.21 _ 20:06
 
 def task_1():
     N = int(input('N을 입력하세요 : '))
@@ -8,15 +9,15 @@ def task_1():
     print(num)
 
 def task_2():
-    preN = False
-    while True:
-        N = float(input('혼합물의 온도를 입력하세요 : '))
-        if N == 999: break
-        if not preN:
-            preN = N
+    preN = False # previous Nunber
+    while True: # Infinity while loop
+        N = float(input('혼합물의 온도를 입력하세요 : ')) 
+        if N == 999: break # condition of break
+        if not preN: # if preN == False
+            preN = N # 첫 번째 값을 저장하기 위한 목적
         else:
             print('{:.2f}'.format(N - preN))
-        preN = N
+        preN = N # 이전 값을 저장하기 위한 목적
 
 def task_3():
     while True:
