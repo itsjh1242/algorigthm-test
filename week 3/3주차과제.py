@@ -35,7 +35,7 @@ def task_4():
 def task_5():
     N = int(input('평면 위의 점 개수를 입력하세요 : '))
     dotArr = []
-    for i in range(N): dotArr.append(input('{}번째 좌표 값을 입력하세요 : ').split())
+    for i in range(N): dotArr.append(input('{}번째 좌표 값을 입력하세요 : '.format(i + 1)).split())
     answer = sorted(dotArr, key = lambda x : x[0] + x[1])
     for x, y in answer:
         print(x, y)
