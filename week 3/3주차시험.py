@@ -17,7 +17,7 @@ def task_2():
             preN = N # 첫 번째 값을 저장하기 위한 목적
         else:
             print('{:.2f}'.format(N - preN))
-        preN = N # 이전 값을 저장하기 위한 목적
+            preN = N # 이전 값을 저장하기 위한 목적
 
 def task_3():
     while True:
