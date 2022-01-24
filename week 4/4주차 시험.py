@@ -24,6 +24,8 @@ def task_2(array, commands):
 
 def task_3(array):
     N = sorted(map(str, array), key = lambda x : x * 3, reverse = True)
+    # x * 3 => 정수 범위 : 1000
+    # 1의 자리 수를 3번 string으로 더했을 때, 1000 이하 값이 나옴
     print(str(int(''.join(N))))
     # answer = []
     # for i in array:
