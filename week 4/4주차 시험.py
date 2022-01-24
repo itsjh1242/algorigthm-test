@@ -24,7 +24,7 @@ def task_2(array, commands):
 
 def task_3(array):
     N = sorted(map(str, array), key = lambda x : x * 3, reverse = True)
-    print(''.join(N))
+    print(str(int(''.join(N))))
     # answer = []
     # for i in array:
     #     flag = False
@@ -41,5 +41,5 @@ def task_3(array):
         
 # task_1()
 # task_2([1, 5, 2, 6, 3, 7, 4], [[2, 5, 3], [4, 4, 1], [1, 7, 3]])
-task_3([6, 10, 2])
-task_3([3, 30, 34, 5, 9])
+# task_3([6, 10, 2])
+# task_3([3, 30, 34, 5, 9])
