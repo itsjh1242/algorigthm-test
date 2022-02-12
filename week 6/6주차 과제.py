@@ -48,8 +48,41 @@ def task_3():
                 answer = ['no']
                 break
     print('\n'.join(answer))
+    
+def task_4():
+    N = [i + 1 for i in range(int(input('N을 입력하세요 : ')))]
+    while len(N) != 1:
+        N.pop(0)
+        N.append(N.pop(0))
+    print(N[0])
+
+def task_5():
+    N = int(input('N을 입력하세요 : '))
+    deque, store_queue = [], []
+    def isEmpty():
+        if not deque: return True
+    for i in range(N):
+        command = input('{}번 명령어를 입력하세요 : '.format(i + 1))
+        if command[:10] == 'push_front':
+            extra = int(command[11:])
+            if not isEmpty():
+                store_queue = deque[0:]
+                deque = [extra] + store_queue
+            else:
+                deque.append(extra)
+        elif command[:9] == 'push_back':
+            extra = int(command[9:])
+            deque.append(extra)
+        elif command == 'pop_front': print(deque.pop(0)) if not isEmpty() else print('-1')
+        elif command == 'pop_back': print(deque.pop(-1)) if not isEmpty() else print('-1')
+        elif command == 'size': print(len(deque))
+        elif command == 'empty': print('1') if len(deque) == 0 else print('0')
+        elif command == 'front': print(deque[0]) if not isEmpty() else print('-1')
+        elif command == 'back': print(deque[-1]) if not isEmpty() else print('-1')
         
 
 # task_1()
 # task_2()
-task_3()
+# task_3()
+# task_4()
+# task_5()
